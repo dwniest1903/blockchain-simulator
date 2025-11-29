@@ -1,0 +1,193 @@
+/* ====== Umum ====== */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  display: flex;
+  background: #333;
+}
+
+.navbar button {
+  flex: 1;
+  padding: 15px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navbar button.active {
+  background: #555;
+}
+
+/* ====== Halaman / Tab ====== */
+.page {
+  display: none;
+  padding: 20px;
+}
+
+.page.active {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Elemen Form ====== */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+textarea,
+input,
+.output {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.output {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-height: 1.5em;
+  word-break: break-all;
+  background: #fafafa;
+}
+
+/* Tombol umum */
+button.mine,
+#btn-add-block {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button.mine:hover,
+#btn-add-block:hover {
+  background: #45a049;
+}
+
+/* ====== Blockchain (blok berjajar) ====== */
+#blockchain {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 15px;
+  white-space: nowrap;
+}
+
+.blockchain-container {
+  white-space: nowrap; /* supaya horizontal */
+  overflow-x: auto; /* scroll horizontal */
+  padding-bottom: 10px;
+}
+
+.blockchain-block {
+  border: 2px solid #3b7a3b;
+  border-radius: 12px;
+  background-color: #d4edda; /* hijau muda */
+  padding: 15px;
+  width: 520px; /* sedikit lebih lebar dari sebelumnya */
+  flex-shrink: 0; /* jangan mengecil saat scroll horizontal */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+.blockchain-block h3 {
+  margin-top: 0;
+}
+
+.blockchain-block textarea {
+  width: 95%;
+  resize: none;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+.blockchain-block .output {
+  background: #eefbee;
+  padding: 5px;
+  border-radius: 6px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid #a8dca5;
+  overflow-x: hidden;
+}
+
+.blockchain-block button.mine {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.blockchain-block input,
+.blockchain-block textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.blockchain-block .hash-output {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  word-break: break-all;
+  background: #fafafa;
+}
+
+.blockchain-block button.mine:hover {
+  background-color: #3c883c;
+}
+
+/* Atur ukuran input nomor block */
+#block-number {
+  width: 60px; /* cukup untuk 3 digit angka */
+  text-align: center; /* biar angkanya rapi di tengah */
+}
+
+#page-ecc textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+#page-ecc hr {
+  margin: 20px 0;
+}
+
+#ecc-verify-result {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status {
+  margin-top: 6px;
+  font-size: 0.9em;
+  color: #333;
+}
+
